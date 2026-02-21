@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/pawan/Downloads/portfolio%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavan Krishna — Portfolio</title>
+<link href="./portfolio (1)_files/css2" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: #f7f8fc;
+    color: #2d2d3a;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    background: #fff;
+    border-bottom: 1px solid #e8e8f0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .nav-name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #3b5bdb;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: #3b5bdb; }
+
+  /* HERO */
+  .hero {
+    background: #fff;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid #e8e8f0;
+  }
+
+  .hero-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b5bdb, #74c0fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-role {
+    color: #3b5bdb;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-bio {
+    max-width: 480px;
+    margin: 0 auto 1.8rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge {
+    background: #eef2ff;
+    color: #3b5bdb;
+    border-radius: 20px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-blue { background: #3b5bdb; color: #fff; }
+  .btn-blue:hover { background: #2f4ac4; }
+
+  .btn-ghost {
+    background: transparent;
+    border: 1.5px solid #d0d5e8;
+    color: #444;
+  }
+
+  .btn-ghost:hover { border-color: #3b5bdb; color: #3b5bdb; }
+
+  /* WRAPPER */
+  .wrapper {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  /* SECTION */
+  .section { margin-bottom: 3.5rem; }
+
+  .section-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #1a1a2e;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: #e8e8f0;
+  }
+
+  /* CARDS */
+  .card {
+    background: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover { box-shadow: 0 4px 16px rgba(59,91,219,0.08); }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #1a1a2e;
+  }
+
+  .card-sub {
+    font-size: 0.84rem;
+    color: #3b5bdb;
+    font-weight: 600;
+    margin-top: 0.1rem;
+  }
+
+  .card-date {
+    font-size: 0.78rem;
+    color: #888;
+    background: #f3f4f8;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .card-body {
+    font-size: 0.88rem;
+    color: #555;
+  }
+
+  .card-body ul {
+    padding-left: 1.2rem;
+    margin-top: 0.4rem;
+  }
+
+  .card-body li { margin-bottom: 0.3rem; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-box {
+    background: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+  }
+
+  .skill-box-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6rem;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .tag {
+    background: #f0f2ff;
+    color: #3b5bdb;
+    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .tag.green { background: #edfaf4; color: #2e7d5e; }
+  .tag.orange { background: #fff4e6; color: #b45309; }
+
+  /* PROJECTS */
+  .project-card {
+    background: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .project-card:hover { box-shadow: 0 4px 16px rgba(59,91,219,0.08); }
+
+  .project-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ABOUT */
+  .about-card {
+    background: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  /* CONTACT */
+  .contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 10px;
+    padding: 0.9rem 1.2rem;
+    text-decoration: none;
+    color: #2d2d3a;
+    font-size: 0.88rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .contact-item:hover { border-color: #3b5bdb; color: #3b5bdb; }
+
+  .contact-icon { font-size: 1.1rem; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+    border-top: 1px solid #e8e8f0;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.7rem; }
+    .nav-links { display: none; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Pavan Krishna 👋</div>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/pawan/Downloads/portfolio%20(1).html#about">About</a></li>
+    <li><a href="file:///C:/Users/pawan/Downloads/portfolio%20(1).html#skills">Skills</a></li>
+    <li><a href="file:///C:/Users/pawan/Downloads/portfolio%20(1).html#experience">Experience</a></li>
+    <li><a href="file:///C:/Users/pawan/Downloads/portfolio%20(1).html#projects">Projects</a></li>
+    <li><a href="file:///C:/Users/pawan/Downloads/portfolio%20(1).html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-avatar">PK</div>
+  <h1>Pavan Krishna Swamy</h1>
+  <div class="hero-role">Web Developer · Cybersecurity Enthusiast</div>
+  <p class="hero-bio">Final-year CSE student at GITAM University. I build clean web apps and have a growing interest in cybersecurity. Looking for my first full-time role.</p>
+  <div class="hero-badges">
+    <span class="badge">⚛️ React</span>
+    <span class="badge">🐍 Python</span>
+    <span class="badge">🔒 Cybersecurity</span>
+    <span class="badge">🎓 Graduating 2026</span>
+  </div>
+  <div class="hero-links">
+    <a href="mailto:pawansonofkp@gmail.com" class="btn btn-blue">✉ Email Me</a>
+    <a href="http://www.linkedin.com/in/g-pavan-krishna-swamy-a70046285/" target="_blank" class="btn btn-ghost">LinkedIn →</a>
+  </div>
+</div>
+
+<div class="wrapper">
+
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <div class="section-title">About Me</div>
+    <div class="about-card">
+      Hi! I'm Pavan, a final-year Computer Science student from Visakhapatnam. I got into web development through building small projects, and picked up cybersecurity along the way through certifications and a virtual internship.
+      <br><br>
+      I had my first professional experience at Zenith-Zap where I built a real client website using React. I'm now looking for opportunities where I can keep learning and contribute meaningfully from day one.
+      <br><br>
+      📍 Visakhapatnam, India &nbsp;|&nbsp; 📞 +91 8790604822 &nbsp;|&nbsp; 🎓 CGPA: 7.27/10
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section" id="skills">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="skill-box-title">Frontend</div>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">Languages</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C</span>
+          <span class="tag">Flask</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">Databases</div>
+        <div class="tags">
+          <span class="tag green">MySQL</span>
+          <span class="tag green">Firebase</span>
+          <span class="tag green">SQLite</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">Cybersecurity</div>
+        <div class="tags">
+          <span class="tag orange">Nmap</span>
+          <span class="tag orange">Metasploit</span>
+          <span class="tag orange">SIEM</span>
+          <span class="tag orange">Parrot OS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section" id="experience">
+    <div class="section-title">Experience</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Software Engineer Intern</div>
+          <div class="card-sub">Zenith-Zap · Remote</div>
+        </div>
+        <span class="card-date">May – Jun 2025</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Built a full client website from scratch using React, HTML &amp; CSS.</li>
+          <li>Developed 4 pages — Home, Products, Blog &amp; Contact — optimized for mobile.</li>
+          <li>Ensured cross-browser compatibility and responsive design throughout.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Ethical Hacking Virtual Intern</div>
+          <div class="card-sub">EduSkills · Remote</div>
+        </div>
+        <span class="card-date">Apr – Jun 2025</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Learned penetration testing using Nmap and Metasploit on Linux/Parrot OS.</li>
+          <li>Practiced network scanning, enumeration, and vulnerability assessment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <div class="section-title">Projects</div>
+
+    <div class="project-card">
+      <div class="project-title">🔐 Secure Authentication System</div>
+      <p class="project-desc">Login and registration app with encrypted passwords (Bcrypt), OTP verification, session-based auth, and protected routes — built with Flask and SQLite.</p>
+      <div class="tags">
+        <span class="tag">Flask</span>
+        <span class="tag">Python</span>
+        <span class="tag">SQLite</span>
+        <span class="tag green">Bcrypt</span>
+        <span class="tag green">OTP</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">🔑 Advanced Password Generator</div>
+      <p class="project-desc">Security-focused tool that generates strong passwords using configurable entropy controls and randomized algorithms, aligned with password policy best practices.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag orange">Security</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section" id="certifications">
+    <div class="section-title">Certifications</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">🛡️ Google Cybersecurity Certificate</div>
+          <div class="card-sub">Coursera · Google</div>
+        </div>
+      </div>
+      <div class="card-body">Network security, risk management, incident response, and SIEM tools.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">🐍 Python Data Structures</div>
+          <div class="card-sub">Coursera · University of Michigan</div>
+        </div>
+      </div>
+      <div class="card-body">Lists, dictionaries, tuples, file handling, and text processing.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">💻 Ethical Hacking Internship Certificate</div>
+          <div class="card-sub">EduSkills</div>
+        </div>
+        <span class="card-date">Apr – Jun 2025</span>
+      </div>
+      <div class="card-body">Penetration testing tools and methodology on Linux/Parrot OS.</div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <div class="section-title">Get In Touch</div>
+    <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">I'm currently open to internships and full-time opportunities. Feel free to reach out!</p>
+    <div class="contact-row">
+      <a href="mailto:pawansonofkp@gmail.com" class="contact-item">
+        <span class="contact-icon">✉️</span> pawansonofkp@gmail.com
+      </a>
+      <a href="tel:+918790604822" class="contact-item">
+        <span class="contact-icon">📞</span> +91 8790604822
+      </a>
+      <a href="http://www.linkedin.com/in/g-pavan-krishna-swamy-a70046285" target="_blank" class="contact-item">
+        <span class="contact-icon">💼</span>G PAVAN KRISHNA SWAMY
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Made with ❤️ by Pavan Krishna Swamy · 2025
+</footer>
+
+
+
+</body></html>
